@@ -1,5 +1,6 @@
 <?php
   echo "APP1";
+  include("Account/CheckConn.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +11,7 @@
     </head>
     <body>
       <div class="container d-flex justify-content-center align-items-center" style="margin-top: 15%;">
-        <form method="post" action="../DB/Account/Login.php" style="display: block;" id="LoginForm">
+        <form method="post" action="Account/Login.php" style="display: block;" id="LoginForm">
             <h1 style="display: inline;">Login<div onclick="Change(id)" style="display:inline;color:darkgrey;cursor:pointer;" id="r"> Registrazione</div></h1>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
@@ -24,7 +25,7 @@
             <button type="submit" class="btn btn-primary" style="margin-top: 2%;">Submit</button>
           </form>
 
-          <form method="post" action="../DB/Account/Registrazione.php" style="display: none;" id="RegForm">
+          <form method="post" action="Account/Registrazione.php" style="display: none;" id="RegForm">
             <h1 style="display: inline;">Registrazione<div onclick="Change(id)" style="display:inline;color:darkgrey;cursor:pointer;" id="l"> Login</div></h1>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>

@@ -14,7 +14,11 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
           echo "Utente giá esistente";  
         }else{
           $id = $usr -> SaveUser();  //Se non ho nessun errore allora salvo l'utente su file;
-          echo "Id dell'utente é: " .$id;
+          if($id ==true){
+            echo "Utente salvato";
+          }else{
+            echo "Utente non salvato";
+          }
           /*header("Location: -------------------------------------");
           exit();*/
         }
