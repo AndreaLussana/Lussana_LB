@@ -2,6 +2,7 @@ version: '3.8'
 services:
     app1:
         container_name: app1
+        hostname: app1
         build:
             context: ./
             dockerfile: Dockerfile
@@ -13,13 +14,14 @@ services:
             - "5001:80"
     app2:
         container_name: app2
+        hostname: app2
         build:
             context: ./
             dockerfile: Dockerfile
         depends_on:
             - db
         volumes:
-            - ./app2:/var/www/html/
+            - ./app1:/var/www/html/
         ports:
             - "5002:80"
     db:

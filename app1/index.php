@@ -1,5 +1,9 @@
 <?php
-  echo "APP1";
+  if($_SERVER["SERVER_ADDR"] == "172.23.0.3"){
+    echo "APP1 con address " . $_SERVER["SERVER_ADDR"];
+  }else{
+    echo "APP2 con address " . $_SERVER["SERVER_ADDR"];
+  }
   include("Account/CheckConn.php");
 ?>
 <!DOCTYPE html>

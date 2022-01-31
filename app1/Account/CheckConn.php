@@ -3,9 +3,9 @@
     if (mysqli_connect_errno()) {
       echo '&lt;h1>Error Connecting to the database!&lt;/h1>';
     } else {
-      $sql = "CREATE TABLE users( id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, mail varchar(50) NOT NULL, psw varchar(255) NOT NULL);";
+      $sql = "CREATE TABLE IF NOT EXISTS users( id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY, mail varchar(50) NOT NULL, psw varchar(255) NOT NULL);";
       if (mysqli_query($con,$sql)) {
-        echo 'Table "users" created successfully!';
+        
       } else {
         echo 'Error creating table "users"';
       }
