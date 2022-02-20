@@ -3,5 +3,4 @@ ports:
     onOpen: open-browser
 
 tasks:
-  - command: sudo docker-compose up db -d
-  - command: sudo docker-compose up app1 app2 nginx -d
+  - command: sudo docker-compose up -d
